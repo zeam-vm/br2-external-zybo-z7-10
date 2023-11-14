@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-ZYNQ_FSBL_VERSION = xlnx_rel_v2022.1
+ZYNQ_FSBL_VERSION = xilinx_v2022.1
 ZYNQ_FSBL_SITE = $(call github,Xilinx,embeddedsw,$(ZYNQ_FSBL_VERSION))
 ZYNQ_FSBL_LICENSE = GPL-2.0+ MIT
 ZYNQ_FSBL_LICENSE_FILES = license.txt
