@@ -1,0 +1,1 @@
+source "$BR2_EXTERNAL_ZYBO_Z7_10_PATH/package/zynq_fsbl/Config.in"
