@@ -1,7 +1,0 @@
-config BR2_PACKAGE_ZYNQ_FSBL
-	bool "zynq_fsbl"
-	help
-	  build Zynq FSBL.
-
-	  url: https://github.com/Xilinx/embeddedsw
-	  path: /lib/sw_apps/zynq_fsbl/misc/Readme.txt
