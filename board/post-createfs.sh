@@ -8,7 +8,6 @@ FWUP_CONFIG=$2
 BOARD_NAME="zybo_z7_10"
 
 BOOTGEN=$HOST_DIR/bin/bootgen
-MKIMAGE=$BUILD_DIR/uboot-digilent_rebase_v2022.01/tools/mkimage
 FWUP=$HOST_DIR/bin/fwup
 
 FW_PATH=$BINARIES_DIR/$BOARD_NAME.fw
@@ -22,10 +21,6 @@ cp -f ${BR2_EXTERNAL_ZYBO_Z7_10_PATH}/board/system.bit .
 cp -f ${BR2_EXTERNAL_ZYBO_Z7_10_PATH}/board/system.dtb .
 "$BOOTGEN" -arch zynq -image bootgen.bif -w -o BOOT.BIN
 cd -
-
-echo "Creating boot.scr..."
-cp -f ${BR2_EXTERNAL_ZYBO_Z7_10_PATH}/board/boot.cmd $BINARIES_DIR
-"$MKIMAGE" -c none -A arm -T script -d $BINARIES_DIR/boot.cmd $BINARIES_DIR/boot.scr
 
 # Build the firmware image (.fw file)
 echo "Creating firmware file..."
